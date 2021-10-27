@@ -1,11 +1,12 @@
 import React from 'react'
-import "./Input.css"
+import "./Input.css";
+
+//Some code changes...
 function Input(props) {
   const { timer, words, currentInput, changeInput, handleKeyDown } = props
   return (
     <div className="input_section">
       <input type="text" disabled={timer === 60} className="input" onKeyDown={handleKeyDown} value={currentInput} onChange={changeInput} />
-
       <div className="demo_text">
         {words.map((word, i) => (
           <span key={i}>
@@ -18,7 +19,6 @@ function Input(props) {
           </span>
         ))}
       </div>
-
     </div >
   )
 }
